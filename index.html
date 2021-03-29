@@ -72,14 +72,14 @@
             let input = document.querySelector('input[name="radio"]:checked')
             checkboxValue = input.getAttribute('value')
             inputText = input.getAttribute('data-number')
-            renderSum(optionValue, checkboxValue)
+            renderSum(checkboxValue, optionValue)
             RenderPlan(inputText)
         }   
         function optionsChecked () {
-            optionValue = document.querySelector('option:checked').getAttribute('value')
-            renderSum(optionValue, checkboxValue)            
+            optionValue = document.querySelector('option:checked').getAttribute('value') 
+            renderSum(checkboxValue, optionValue)          
         }
-        function renderSum (checkboxValue, optionValue = 0) {
+        function renderSum (checkboxValue, optionValue = 1) {
             sum = document.querySelector('#sum')
             if (checkboxValue) {
                 sum.innerHTML = '$' +checkboxValue * optionValue + '<span>us</span>'
