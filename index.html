@@ -79,7 +79,7 @@
             optionValue = document.querySelector('option:checked').getAttribute('value')
             renderSum(optionValue, checkboxValue)            
         }
-        function renderSum (checkboxValue = 1, optionValue = 1) {
+        function renderSum (checkboxValue, optionValue = 0) {
             sum = document.querySelector('#sum')
             if (checkboxValue) {
                 sum.innerHTML = '$' +checkboxValue * optionValue + '<span>us</span>'
